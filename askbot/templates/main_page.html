@@ -8,7 +8,7 @@
     there is no html markup in this file
 #}
 <!-- questions.html -->
-{% block title %}{% spaceless %}{% trans %}Questions{% endtrans %}{% endspaceless %}{% endblock %}
+{% block title %}{% if scope =='favorite' %}{% trans %}Questions &amp; News{% endtrans %}{% elif scope == 'news' %}{% trans %}News{% endtrans %}{% else %}{% trans %}Questions{% endtrans %}{% endif %}{% endblock %}
 {% block content %}
     {% include "main_page/tab_bar.html" %}
     {% include "main_page/headline.html" %}

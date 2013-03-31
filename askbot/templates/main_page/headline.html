@@ -1,7 +1,13 @@
 {% import "macros.html" as macros %}
 {% if questions_count > 0 %}
         <h1 id="questionCount" class="search-result-summary">
-            {% trans cnt=questions_count, q_num=questions_count|intcomma %}{{q_num}} question{% pluralize %}{{q_num}} questions{% endtrans %}
+            {% if scope =='favorite' %}
+                {{questions_count|intcomma}} {% trans %}questions &amp; news{% endtrans %}
+            {% elif scope == 'news' %}
+                {{questions_count|intcomma}} {% trans %}news{% endtrans %}
+            {% else %}
+                {% trans cnt=questions_count, q_num=questions_count|intcomma %}{{q_num}} question{% pluralize %}{{q_num}} questions{% endtrans %}
+            {% endif %}
         {% if author_name %}
             {% trans %}with {{author_name}}'s contributions{% endtrans %}
         {% endif %}

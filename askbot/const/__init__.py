@@ -53,7 +53,7 @@ POST_SORT_METHODS = (
     ('relevance-desc', _('relevance')),
 )
 
-POST_TYPES = ('answer', 'comment', 'question', 'tag_wiki', 'reject_reason')
+POST_TYPES = ('answer', 'news', 'comment', 'question', 'tag_wiki', 'reject_reason')
 
 SIMPLE_REPLY_SEPARATOR_TEMPLATE = '==== %s -=-=='
 
@@ -181,10 +181,12 @@ TYPE_ACTIVITY_POST_SHARED = 29
 TYPE_ACTIVITY_ASK_TO_JOIN_GROUP = 30
 #TYPE_ACTIVITY_EDIT_QUESTION = 17
 #TYPE_ACTIVITY_EDIT_ANSWER = 18
+TYPE_ACTIVITY_SHARE_NEWS = 31
 
 #todo: rename this to TYPE_ACTIVITY_CHOICES
 TYPE_ACTIVITY = (
     (TYPE_ACTIVITY_ASK_QUESTION, _('asked a question')),
+    (TYPE_ACTIVITY_SHARE_NEWS, _('shared some news')),
     (TYPE_ACTIVITY_ANSWER, _('answered a question')),
     (TYPE_ACTIVITY_COMMENT_QUESTION, _('commented question')),
     (TYPE_ACTIVITY_COMMENT_ANSWER, _('commented answer')),
