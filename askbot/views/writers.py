@@ -303,6 +303,7 @@ def ask(request):#view used to ask a new question
         'active_tab': 'ask',
         'page_class': 'ask-page',
         'form' : form,
+        'is_news': 'news' in form.initial['tags'],
         'mandatory_tags': models.tag.get_mandatory_tags(),
         'email_validation_faq_url':reverse('faq') + '#validate',
         'category_tree_data': askbot_settings.CATEGORY_TREE,

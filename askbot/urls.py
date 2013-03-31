@@ -129,6 +129,11 @@ urlpatterns = patterns('',
         name='ask'
     ),
     url(
+        r'^%s%s$' % (_('news/'), _('share/')),
+        views.writers.ask,
+        name='share_news'
+    ),
+    url(
         r'^%s(?P<id>\d+)/%s$' % (_('questions/'), _('edit/')),
         views.writers.edit_question,
         name='edit_question'

@@ -172,10 +172,22 @@ SearchDropMenu.prototype.createDom = function() {
         footer.addClass('footer');
         var button = this.makeElement('button');
         button.addClass('submit');
-        button.html(gettext('Ask Your Question'))
+        button.html(gettext('Ask Question'));
         footer.append(button);
         var handler = this._askHandler;
         setupButtonEventHandlers(button, handler);
+
+        var news_button = this.makeElement('button');
+        news_button.addClass('submit');
+        news_button.html(gettext('Share News'));
+        footer.append(news_button);
+        var me = this;
+        setupButtonEventHandlers(news_button, function() {
+            console.log(me);
+            var query = me.fts.getSearchQuery();
+            window.location.href = askbot['urls']['share_news'] + '?tags=news&title=' + query;
+            return false;
+        });
     }
 
     $(document).keydown(this.makeKeyHandler());
@@ -322,7 +334,7 @@ var FullTextSearch = function() {
     this._baseUrl = askbot['urls']['questions'];
     this._q_list_sel = 'question-list';//id of question listing div
     /** @todo: the questions/ needs translation... */
-    this._searchUrl = '/scope:all/sort:activity-desc/page:1/'
+    this._searchUrl = '/scope:all/sort:activity-desc/page:1/';
     this._askButtonEnabled = true;
 };
 inherits(FullTextSearch, WrappedElement);
@@ -823,6 +835,7 @@ FullTextSearch.prototype.decorate = function(element) {
     this._toolTip = toolTip;
 
     var dropMenu = new SearchDropMenu();
+    dropMenu.fts = this;
     dropMenu.setAskHandler(this.makeAskHandler());
     dropMenu.setAskButtonEnabled(this._askButtonEnabled);
     this._dropMenu = dropMenu;

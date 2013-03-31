@@ -45,7 +45,11 @@
     {% if not request.user.is_authenticated() %}
     <input type="submit" name="post_anon" value="{% trans %}Login/Signup to Post{% endtrans %}" class="submit" />
     {% else %}
-    <input type="submit" name="post" value="{% trans %}Ask Your Question{% endtrans %}" class="submit" />
+        {% if not is_news %}
+            <input type="submit" name="post" value="{% trans %}Ask Your Question{% endtrans %}" class="submit" />
+        {% else %}
+            <input type="submit" name="post" value="{% trans %}Share Your News{% endtrans %}" class="submit" />
+        {% endif %}
     {% endif %}
     <div class="clean"></div>
 </form>
