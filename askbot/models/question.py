@@ -319,16 +319,18 @@ class ThreadManager(BaseQuerySetManager):
 
             #construct filter for the tag search
             for tag in tags:
-                qs = qs.filter(tags__name=tag) # Tags or AND-ed here, not OR-ed (i.e. we fetch only threads with all tags)
+                qs = qs.filter(tags__name=tag)  # Tags or AND-ed here, not OR-ed (i.e. we fetch only threads with all tags)
         else:
             meta_data['non_existing_tags'] = list()
 
-        if search_state.scope == 'unanswered':
-            qs = qs.filter(closed = False) # Do not show closed questions in unanswered section
+        if search_state.scope == 'news':
+            qs = qs.filter(tags__name="news")
+        elif search_state.scope == 'unanswered':
+            qs = qs.filter(closed=False).exclude(tags__name="news")  # Do not show closed questions in unanswered section and ignore news
             if askbot_settings.UNANSWERED_QUESTION_MEANING == 'NO_ANSWERS':
                 # todo: this will introduce a problem if there are private answers
                 # which are counted here
-                qs = qs.filter(answer_count=0) # TODO: expand for different meanings of this
+                qs = qs.filter(answer_count=0)  # TODO: expand for different meanings of this
             elif askbot_settings.UNANSWERED_QUESTION_MEANING == 'NO_ACCEPTED_ANSWERS':
                 qs = qs.filter(accepted_answer__isnull=True)
             elif askbot_settings.UNANSWERED_QUESTION_MEANING == 'NO_UPVOTED_ANSWERS':
@@ -342,6 +344,8 @@ class ThreadManager(BaseQuerySetManager):
                 followed_users = request_user.get_followed_users()
                 favorite_filter |= models.Q(posts__post_type__in=('question', 'answer'), posts__author__in=followed_users)
             qs = qs.filter(favorite_filter)
+        elif not "news" in tags:
+            qs = qs.exclude(tags__name="news")
 
         #user contributed questions & answers
         if search_state.author:
