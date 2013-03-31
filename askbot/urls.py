@@ -561,7 +561,7 @@ if getattr(settings, 'ASKBOT_USE_STACKEXCHANGE_URLS', False):
     ),)
 else:
     urlpatterns += (url(
-        r'^%s(?P<id>\d+)/' % _('question/'),
+        r'^%s(?P<id>\d+)/' % _('entry/'),
         views.readers.question,
         name='question'
     ),)
