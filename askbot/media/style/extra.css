@@ -1,0 +1,729 @@
+/* ----- General HTML Styles----- */
+body, input, select {
+    font-family: 'PT Sans', sans-serif;
+}
+
+input, select {
+    font-family: 'Arvo', serif;
+    font-size: 14px;
+}
+
+input, textarea {
+    box-shadow: none;
+}
+
+abbr {
+    border: none;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+.notify {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    background-color: #F6a658;
+}
+
+#ContentRight {
+    margin-top: -59px;
+}
+#ContentLeft {
+    margin-left: 3px;
+}
+
+#custom-header {
+    background-color: #16193e;
+}
+
+#topBar {
+    height: 38px;
+    position: relative;
+}
+
+#scopeNav {
+    margin-left: 10px;
+}
+
+#topLink {
+    background-image: url('../images/top-bar-logo.png');
+    background-repeat: no-repeat;
+    background-position: -23px center;
+    display: inline-block;
+    height: 100%;
+    margin-left: 3px;
+    width: 125px;
+}
+
+
+#header {
+    background-color: #fff;
+    font-family: inherit;
+}
+
+#logo img {
+    padding: 14px 0;
+    height: 56px;
+    width: 205px;
+}
+
+#metaNav {
+    float: none;
+    position: relative;
+    top: 29px;
+    margin-left: 238px;
+}
+
+#metaNav a {
+    height: 25px;
+    padding: 0px 13px 5px;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 0 20px 0 0;
+}
+
+#metaNav, #metaNav #navTags, #metaNav #navUsers, #metaNav #navBadges {
+    color: #fff;
+    background: #80d2ee;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-family: 'Arvo', serif;
+}
+
+#metaNav #navTags.on, #metaNav #navUsers.on, #metaNav #navBadges.on {
+    background: #2c307a;
+}
+
+#header.with-logo #userToolsNav {
+    top: -31px;
+}
+
+#userToolsNav a,
+#userToolsNav .user-info,
+#userToolsNav .user-micro-info {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    color: #9c99b3;
+}
+
+#secondaryHeader #homeButton {
+    display: none;
+}
+
+#secondaryHeader {
+    background: transparent;
+    border: none;
+    font-family: 'Arvo', serif;
+    margin-bottom: 0;
+}
+
+/*#secondaryHeader .content-wrapper {
+    border-bottom: 2px solid #b3b3b3;
+}*/
+
+#secondaryHeader #scopeWrapper {
+    padding-left: 50px;
+}
+
+/*#secondaryHeader #scopeWrapper */
+.scope-selector {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: #2c307a;
+    background: transparent;
+    height: 20px;
+    line-height: 20px;
+    text-transform: lowercase;
+    margin-top: 5px;
+    margin-left: 0px;
+    padding: 3px 10px;
+    position: relative;
+    top: 2px;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+.scope-selector.on,
+.scope-selector:hover {
+    background: #aaa;
+    text-decoration: none;
+    text-shadow: white 0 0 10px;
+    -webkit-transition: 0.1s ease;
+}
+
+#secondaryHeader #scopeWrapper .on {
+    background: #fff;
+    border: 2px solid #b3b3b3;
+    border-bottom: none;
+    padding-top: 1px;
+}
+
+#searchBar {
+    height: 27px;
+    margin: -27px 228px 0 238px;
+    padding-top: 1px;
+    box-shadow: inset #eee 1px 1px 2px 1px;
+}
+
+#searchBar div.input-tool-tip {
+    margin-top: -33px;
+    -webkit-transition: 0.1s ease;
+}
+
+input[type="submit"].searchBtn, 
+input[type="submit"].searchBtn:hover {
+    display: none;
+    /*background-image: url('../images/search-button.png');
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;*/
+}
+
+#searchBar input.searchInput, #searchBar .searchInputCancelable,
+#searchBar input.searchInput:focus, #searchBar .searchInputCancelable:focus {
+    font-family: 'Arvo', serif;
+    width: 310px;
+    height: 25px;
+    font-size: 14px;
+    line-height: 25px;
+    padding: 0;
+    margin: 0;
+    border-radius: 0px;
+    box-shadow: none;
+    outline: none;
+}
+
+.cancelSearchBtn {
+    width: 0px;
+    height: 0px;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#searchForm {
+    margin: 0;
+}
+
+#askButton {
+    display: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 26px;
+    margin-top: 0px;
+    height: 25px;
+    color: #2C307A;
+}
+
+.search-result-summary {
+    margin-left: 14px;
+}
+
+.main-page .tabsA .label {
+    font-weight: bold;
+}
+
+.tabsA a,
+.tabsC a {
+    color: #888;
+}
+
+.tabsA a.on,
+.tabsA a:hover,
+.tabsC a.on,
+.tabsC a:hover {
+    color: #2c307a;
+    -webkit-transition: 0.5s ease;
+}
+
+.tabsA .label,
+.tabsC .label {
+    margin-top: 3px;
+}
+
+.user-profile-page .tabsC a:first-child {
+    padding-left: 2px;
+}
+
+.section-title {
+    font-family: 'PT Sans', sans-serif;
+}
+
+h1.section-title,
+#questionCount {
+    font-family: 'Arvo', serif;
+    color: #2c307a;
+}
+
+.box h2, .box h3, .box label {
+    font-family: 'Arvo', serif;
+    color: #999;
+}
+
+.box .inputs #interestingTagInput, .box .inputs #ignoredTagInput, .box .inputs #subscribedTagInput, .box .inputs #ab-tag-search {
+    width: 140px;
+}
+
+.box .inputs #interestingTagAdd, .box .inputs #ignoredTagAdd, .box .inputs #subscribedTagAdd, .box .inputs #ab-tag-search-add {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+    color: #2C307A;
+    width: 40px;
+    text-transform: uppercase;
+}
+
+.tabBar {
+    background-color: transparent;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tabBar a {
+    /*background-color: #eff5f6;*/
+}
+
+.tabBar a:first-of-type {
+    border-left: none;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.tabBar a:last-of-type {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.rss {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.short-summary {
+    background: transparent;
+    border-bottom: 2px dashed #b3b3b3;
+    margin-left: 7px;
+    width: 713px;
+}
+
+.short-summary a, .revision h3, .user-profile-page h2 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c307a;
+}
+
+.user-profile-page h2 .count {
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+}
+
+.tags a.tag-right, .tags span.tag-right {
+    color: #7fd2f0;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 0px;
+}
+
+.tag-left {
+    box-shadow: none;
+}
+
+.tag-right {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.short-summary .counts {
+    float: left;
+}
+
+.short-summary h2, .short-summary .tags {
+    margin-left: 210px;
+}
+
+.short-summary .userinfo {
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+}
+
+.short-summary .userinfo a {
+    color: #80d2ee;
+    font-size: 12px;
+}
+
+.short-summary .userinfo .timeago, .short-summary span.anonymous {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'PT Sans', sans-serif;
+    color: #999;
+}
+
+.short-summary .votes, .short-summary .answers, .short-summary .favorites, .short-summary .views {
+    background: transparent;
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+    color: inherit;
+}
+
+.short-summary .counts .votes div, .short-summary .counts .views div, .short-summary .counts .answers div, .short-summary .counts .favorites div {
+    color: inherit;
+}
+
+.short-summary .counts .item-count {
+    font-family: 'Arvo', serif;
+    color: inherit;
+}
+
+.short-summary .votes {
+    color: #7f65a3;
+    margin-left: -13px;
+}
+
+.short-summary .answers {
+    color: #e05a5a;
+}
+
+.short-summary .some-answers, .short-summary .accepted {
+    color: #fff;
+    background-color: #c2db5a;
+}
+
+.short-summary .views {
+    color: #999;
+}
+
+.delete-icon {
+    margin-top: 0px;
+    height: 18px;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+#listSearchTags, .question-page h1, .question-page p.rss a {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.question-page p.rss a {
+    font-size: 13px;
+    color: #2c307a;
+    font-weight: normal;
+}
+
+.question-page h1 a {
+    font-size: 18px;
+    color: #2c307a;
+    font-weight: bold;
+}
+
+.share-question {
+    font-family: 'PT Sans', sans-serif;
+    color: #2c307a;
+    display: inline-block;
+}
+
+.question-page .vote-number {
+    font-family: 'Arvo', serif;
+    padding: 3px 0;
+}
+
+.box p, .question-page #fmanswer h2,
+.message, .question-page #comment-title {
+    font-family: 'PT Sans', sans-serif;
+    color: #999;
+}
+
+.follow-toggle,
+.box a.followed,
+.box a.follow,
+.submit,
+.box .inputs #interestingTagAdd,
+.box .inputs #ignoredTagAdd,
+.box .inputs #subscribedTagAdd,
+#fmanswer input.submit,
+.ask-page input.submit,
+.edit-question-page input.submit,
+#email-input-fs .submit-b,
+#local_login_buttons .submit-b,
+#password-fs .submit-b,
+#openid-fs .submit-b {
+    font-family: 'PT Sans', sans-serif;
+    color: white;/*#2C307A;*/
+    background: url("../images/alert-overlay.png") repeat-x scroll 0 0 #77B226;
+    border-radius: 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.follow-toggle:hover,
+.box a.followed:hover,
+.box a.follow:hover,
+.submit:hover,
+.box .inputs #interestingTagAdd:hover,
+.box .inputs #ignoredTagAdd:hover,
+.box .inputs #subscribedTagAdd:hover,
+#fmanswer input.submit:hover,
+.ask-page input.submit:hover,
+.edit-question-page input.submit:hover,
+#email-input-fs .submit-b:hover,
+#local_login_buttons .submit-b:hover,
+#password-fs .submit-b:hover,
+#openid-fs .submit-b:hover {
+    background: inherit;
+    text-shadow: inherit;
+    background-color: #6a9c21;
+}
+
+#local_login_buttons .submit-b {
+    width: inherit;
+}
+
+#fmanswer {
+    float: left;
+}
+
+#fmanswer input.submit {
+    width: 230px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 26px;
+}
+
+#fmanswer #question-subscribe-updates {
+    margin-left: 7px;
+}
+
+.ask-page input.submit, .edit-question-page input.submit {
+    width: 210px;
+}
+
+.ask-page #scopeNav {
+    display: none;
+}
+.ask-page #ContentLeft,
+.ask-page #ContentRight {
+    margin-top: -50px;
+}
+
+.evenMore,
+.openid-signin input.submit, .meta input.submit, .users-page input.submit,
+.user-profile-edit-page input.submit, .user-profile-page input.submit {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    color: #2C307A !important;
+}
+
+.openid-signin input.submit, .meta input.submit, .users-page input.submit,
+.user-profile-edit-page input.submit, .user-profile-page input.submit {
+    background-image: linear-gradient(#d2e2e5, #d2e2e5 25%, #a9c2c7) !important;
+    background-image: -webkit-linear-gradient(#d2e2e5, #d2e2e5 25%, #a9c2c7) !important;
+}
+
+.openid-signin input.submit:hover, .meta input.submit:hover, .users-page input.submit:hover,
+.user-profile-edit-page input.submit:hover, .user-profile-page input.submit:hover {
+    background-image: linear-gradient(#cde5e9, #cde5e9 25%, #94b3ba) !important;
+    background-image: -webkit-linear-gradient(#cde5e9, #cde5e9 25%, #94b3ba) !important;
+}
+
+.question-page .vote-buttons .notify-sidebar label, .question-page #fmanswer label {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    color: #999;
+}
+
+.question-page .question-body, .question-page .answer-body, .question-page #questionCount, .answer-votes,
+.openid-signin p, .meta p, .user-profile-edit-page p {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.openid-signin p, .meta p, .user-profile-edit-page p {
+    font-size: 14px;
+}
+
+.preview-toggle {
+    color: #f6a658;
+}
+
+a.medal {
+    font-weight: bold;
+    color: #999;
+}
+
+.vote-count {
+    font-family: 'PT Sans', sans-serif;
+    position: relative;
+    top: -5px;
+}
+
+.openid-signin input.submit, .meta input.submit, .users-page input.submit, .user-profile-edit-page input.submit, .user-profile-page input.submit {
+    width: 130px;
+}
+
+.question-page .post-controls a {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.question-page .post-update-info {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.question-page .comments .controls a {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.question-page .comments .counter {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.question-page .comments button {
+    color: #2C307A;
+    font-family: 'PT Sans',sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    width: 120px;
+}
+
+.question-page .comments textarea {
+    font-family: 'PT Sans',sans-serif;
+}
+
+/* footer specific styles */
+#ground, html {
+    background-color: #eceeeb;
+}
+
+#ground {
+    border-top: none;
+    font-family: 'PT Sans',sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.puppet-footer {
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.puppet-footer-top-section {
+    position: relative;
+    height: 40px;
+}
+
+.puppet-footer-middle-section {
+    position: relative;
+    height: 30px;
+}
+
+.puppet-footer-bottom-section {
+    position: relative;
+    height: 50px;
+}
+
+.puppet-footer-underlined-section {
+    height: 100%;
+    border-bottom: 1px solid #b5b5b5;
+}
+
+.puppet-footer-left-sub-section {
+    position: absolute;
+    left: 0px;
+}
+
+.puppet-footer-right-sub-section {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.puppet-footer-right-sub-section div {
+    display: inline-block;
+}
+
+.puppet-footer-top-section a {
+    display: inline-block;
+    margin: 15px 10px 0px 10px;
+    color: #666;
+}
+
+.puppet-footer-middle-section a {
+    display: inline-block;
+    margin: 5px 5px 5px 10px;
+    color: #666;
+    font-size: 10px;
+}
+
+.puppet-footer-delimiter {
+    padding: 0px 5px;
+}
+
+.puppet-footer-delimiter a {
+    color: #7f65a3;
+    margin: 0px;
+    line-height: 10px;
+}
+
+.puppet-footer-delimiter {
+    border-left: 1px solid #7f65a3;
+}
+
+.puppet-footer-delimiter:first-of-type {
+    border-left: none;
+}
+
+.puppet-footer-delimiter:last-of-type {
+    padding-right: 0px;
+}
+
+.puppet-footer-bottom-section a {
+    display: inline-block;
+    margin: 10px 5px 0px 3px;
+    font-size: 9px;
+    color: #666;
+}
+
+.puppet-footer-bottom-section a:first-of-type {
+    margin-left: 10px;
+}
+
+.puppet-footer-bottom-section .puppet-footer-link-shift {
+    display: inline-block;
+    position: relative;
+    top: -5px;
+}
+
+.puppet-footer-bottom-section p {
+    font-size: 9px;
+    color: #666;
+    text-align: right;
+}
+
+.copyright {
+    text-align: left;
+}
+
+.footer-links, .powered-link {
+    margin-left: 10px;
+}
+
+.footer-links, .footer-links a {
+    color: #7f65a3;
+}
+.search-drop-menu {
+    margin: 0 228px 0 238px;
+}
+
+.rss {
+    margin-top: 3px;
+    padding-top: 4px;
+}
+
+.wmd-container {
+    margin-top: 14px;
+}
